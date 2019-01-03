@@ -22,8 +22,7 @@ public class NoteController {
 
     @PostMapping("key")
     public ResponseEntity<String> setNote(@RequestBody Map body) {
-        Map<String,String> map = (Map<String, String>) body;
-        Map.Entry<String,String> entry = map.entrySet().iterator().next();
+        Map.Entry<String,String> entry = (Map.Entry<String, String>) body.entrySet().iterator().next();
         String id = entry.getKey();
         String message = entry.getValue();
 
