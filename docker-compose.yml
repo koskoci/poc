@@ -1,15 +1,15 @@
 version: '3'
 services:
   web1:
-    build: .
+    image : koskoci/poc
     ports:
       - "8080:8080"
   web2:
-    build: .
+    image : koskoci/poc
     ports:
       - "8081:8080"
   web3:
-    build: .
+    image : koskoci/poc
     ports:
       - "8082:8080"
   redis:
